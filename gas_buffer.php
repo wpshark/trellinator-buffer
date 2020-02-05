@@ -59,6 +59,7 @@ echo 'SCRIPT START'.PHP_EOL;
                         $cmd     = 'php gas_cmd_line.php "'.$tubes[$key].'"';
 echo 'executing: '.$cmd.PHP_EOL;
                         $process = new Process($cmd);
+                        $process->setTimeout(3600);
                         $process->start();
                         //$processes[$script_id][$tubes[$key]] = $process;
                         $processes[$script_id][] = $process;
