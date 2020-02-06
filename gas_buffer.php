@@ -101,5 +101,5 @@ echo 'executing: '.$cmd.PHP_EOL;
             }
         }
         
-        usleep(100000);
+        sleep(1);
     }
