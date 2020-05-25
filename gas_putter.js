@@ -29,7 +29,7 @@ http.createServer(function (req, res) {
             ///forward-gas-service-test/AKfycbzxvwNqwgXXnJEcs0ICFEAZyY67o9P2zSIPjH4mGG4oOEGYoWw
             var url_parts = url.parse(req.url, true);
             var parts = /^\/.+\/(.+)$/.exec(url_parts.pathname);
-            var script_id = parts[1].replace(/[^A-Za-z0-9_=]/g,'');
+            var script_id = parts[1].replace(/[^A-Za-z0-9_=\-]/g,'');
             var timeStamp = Math.floor(Date.now() / 20000);//20 second window
             var use_tube = "trellinator-"+script_id+"-"+timeStamp;
             var new_url = "https://script.google.com/macros/s/"+script_id+"/exec";
